@@ -1,7 +1,5 @@
 package com.trustrace.VintageElegance.model;
 
-
-
 public enum ERole {
     ROLE_USER,
     ROLE_MODERATOR,

@@ -1,8 +1,4 @@
 package com.trustrace.VintageElegance.payload.request;
-
-
-
-
 import jakarta.validation.constraints.NotBlank;
 
 public class LoginRequest {

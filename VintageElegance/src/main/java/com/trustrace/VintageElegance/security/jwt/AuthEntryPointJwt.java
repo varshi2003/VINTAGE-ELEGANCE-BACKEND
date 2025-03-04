@@ -1,6 +1,4 @@
 package com.trustrace.VintageElegance.security.jwt;
-
-
 import java.io.IOException;
 
 import jakarta.servlet.ServletException;

@@ -1,7 +1,4 @@
 package com.trustrace.VintageElegance.payload.request;
-
-
-
 import java.util.Set;
 
 import jakarta.validation.constraints.Email;

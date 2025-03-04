@@ -1,7 +1,4 @@
 package com.trustrace.VintageElegance.payload.response;
-
-
-
 import java.util.List;
 
 public class JwtResponse {

@@ -1,7 +1,5 @@
 package com.trustrace.VintageElegance.payload.response;
 
-
-
 public class MessageResponse {
     private String message;
 
