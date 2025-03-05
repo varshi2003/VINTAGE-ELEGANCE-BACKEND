@@ -26,7 +26,7 @@ public class AdminRequestService {
 
 
     public List<AdminRequest> getAllRequests() {
-        return adminRequestRepository.findAll();
+        return adminRequestRepository.findAllByStatus("PENDING");
     }
 
     public AdminRequest updateRequestStatus(String id, String status, String message) {

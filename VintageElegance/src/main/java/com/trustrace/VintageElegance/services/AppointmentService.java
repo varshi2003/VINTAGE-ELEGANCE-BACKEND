@@ -23,9 +23,7 @@ public class AppointmentService {
         return appointmentRepository.save(appointment);
     }
 
-//    public List<Appointment> getAllAppointments() {
-//        return appointmentRepository.findAll();
-//    }
+
 public List<Appointment> getAllAppointments() {
     try {
         return appointmentRepository.findAll();

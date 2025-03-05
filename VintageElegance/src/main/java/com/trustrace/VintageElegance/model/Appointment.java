@@ -5,6 +5,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 import java.util.List;
+import java.time.LocalDateTime;
 
 @Document(collection = "appointments")
 public class Appointment {
@@ -12,6 +13,7 @@ public class Appointment {
     private String id;
     private Service service;
 
+    private LocalDateTime dateTime;
     private String state;
     private String city;
     private String outlet;
@@ -26,6 +28,16 @@ public class Appointment {
     private String message;
     private Double totalCost;
     private String paymentStatus = "Successful";
+    private boolean reminderSent = false;
+
+    public Service getService() {
+        return service;
+    }
+
+    public void setService(Service service) {
+        this.service = service;
+    }
+
 
     private String razorpayOrderId;
     private String razorpayPaymentId;
@@ -54,9 +66,17 @@ public class Appointment {
         this.razorpayOrderId = razorpayOrderId;
         this.razorpayPaymentId = razorpayPaymentId;
         this.razorpaySignature = razorpaySignature;
+        this.reminderSent = reminderSent;
+        this.dateTime = dateTime;
     }
 
-    // Getters and Setters
+    public LocalDateTime getDateTime() {
+        return dateTime;
+    }
+
+    public void setDateTime(LocalDateTime dateTime) {
+        this.dateTime = dateTime;
+    }
     public String getId() { return id; }
     public void setId(String id) { this.id = id; }
     public String getState() { return state; }
@@ -93,4 +113,6 @@ public class Appointment {
     public void setRazorpayPaymentId(String razorpayPaymentId) { this.razorpayPaymentId = razorpayPaymentId; }
     public String getRazorpaySignature() { return razorpaySignature; }
     public void setRazorpaySignature(String razorpaySignature) { this.razorpaySignature = razorpaySignature; }
+    public boolean isReminderSent() { return reminderSent; }  // ✅ Getter for reminderSent
+    public void setReminderSent(boolean reminderSent) { this.reminderSent = reminderSent; }  // ✅ Setter for reminderSent
 }

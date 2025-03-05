@@ -7,4 +7,6 @@ import java.util.List;
 
 public interface AdminRequestRepository extends MongoRepository<AdminRequest, String> {
     List<AdminRequest> findByOutlet(String outlet);
+
+    List<AdminRequest> findAllByStatus(String pending);
 }
